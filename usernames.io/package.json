@@ -1,0 +1,17 @@
+{
+  "name": "usernames.io",
+  "version": "0.0.0",
+  "description": "usernames.io",
+  "main": "server.js",
+  "author": {
+    "name": "t-begree",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "^4.6.1",
+    "q": "^1.0.1",
+    "request": "^2.37.0",
+    "swig": "^1.4.1",
+    "user-agent-is-browser": "^0.1.0"
+  }
+}
