@@ -15,7 +15,12 @@ server.get("/", function (req, res) {
             res.send({ username: username });
         }
     }, function (fail) {
-        res.send("FAIL: " + fail);
+        var message = "couldn't generate username";
+        if (isBrowser(req.headers['user-agent'])) {
+            res.send(500, render("error", { message: message }));
+        } else {
+            res.send(500, { message: message });
+        }
     });
 });
 
