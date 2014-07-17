@@ -1,7 +1,8 @@
-﻿var request = require('request');
-var q = require('q');
-
-var wordnik_token = "721d3bfd50df487a1680c0537ca01260c2a0ca2b83ce751fd";
+﻿var request = require('request'),
+    utils = require('./utils'),
+    cap = utils.capitalize,
+    q = require('q'),
+    wordnik_token = "721d3bfd50df487a1680c0537ca01260c2a0ca2b83ce751fd";
 
 module.exports = {
     //wraps up the actual logic to query freebase
@@ -21,7 +22,7 @@ module.exports = {
                     } else {
                         var nounRes = JSON.parse(body);
 
-                        defered.resolve(adjRes.word+" "+nounRes.word);
+                        defered.resolve(cap(adjRes.word)+" "+cap(nounRes.word));
                     }
                 });
             }

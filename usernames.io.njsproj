@@ -33,6 +33,7 @@
     <Compile Include="api.js" />
     <Compile Include="render.js" />
     <Compile Include="server.js" />
+    <Compile Include="utils.js" />
     <Content Include="views\error.html" />
     <Content Include="views\main.html" />
     <Content Include="Web.config" />

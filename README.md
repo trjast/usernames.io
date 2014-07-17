@@ -1,4 +1,3 @@
-usernames.io
-============
+﻿# usernames.io
 
-generate unique usernames
+
