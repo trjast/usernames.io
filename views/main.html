@@ -1,12 +1,41 @@
 ﻿{% extends 'layout.html' %}
 
 {% block title %}
-{{user}}
+{{ user }}
 {% endblock %}
 
 {% block content %}
-<center>
-    <h1>Why don't you use {{user}}.</h1>
-    <h2><a href="/">HELL NO!</a></h2>
-</center>
+	<h1>Why don't you use <span id="username">{{ user }}</span>.</h1>
+	<ul class="availability">
+		<li>
+			<i class="fa fa-globe fa-2x"></i>
+			<a href="http://www.namecheap.com/?aff=72210" title="Register on Namecheap" target="_blank">{{ user|lower }}.com</a>
+			<div class="loading" id="url"><i class="loading-spinner"></i></div>
+		</li>
+		<li>
+			<i class="fa fa-facebook fa-2x"></i>
+			<a href="https://www.facebook.com/username" title="Register on Facebook" target="_blank">facebook.com/{{ user|lower }}</a>
+			<div class="loading" id="facebook"><i class="loading-spinner"></i></div>
+		</li>
+		<li>
+			<i class="fa fa-twitter fa-2x"></i>
+			<a href="https://twitter.com/signup" title="Register on Twitter" target="_blank">twitter.com/{{ user|lower }}</a>
+			<div class="loading" id="twitter"><i class="loading-spinner"></i></div>
+		</li>
+		<li>
+			<i class="fa fa-github fa-2x"></i>
+			<a href="https://github.com/join" title="Register on GitHub" target="_blank">github.com/{{ user|lower }}</a>
+			<div class="loading" id="github"><i class="loading-spinner"></i></div>
+		</li>
+		<li>
+			<i class="fa fa-linkedin fa-2x"></i>
+			<a href="http://www.linkedin.com/profile/public-profile-settings" title="Register on LinkedIn" target="_blank">linkedin.com/in/{{ user|lower }}</a>
+			<div class="loading" id="linkedin"><i class="loading-spinner"></i></div>
+		</li>
+	</ul>
+	<h2><a href="/">Try Another?</a></h2>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/scripts/custom.js"></script>
 {% endblock %}

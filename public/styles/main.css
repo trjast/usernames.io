@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
+
+* {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #465766;
+	text-align: center;
+}
+body {
+	margin: 0;
+}
+
+.header {
+	background: #E85C41;
+	width: 100%;
+	padding: 25px 0px;
+}
+	.header #logo {
+		width: 500px;
+		max-width: 90%;
+	}
+
+.content {
+	width: 100%;
+	margin-top: 50px;
+	padding: 25px 0px;
+}
+	.content #username, .content a {
+		color: #E85C41;
+		text-decoration: none;
+	}
+		.content .availability {
+			display: inline-block;
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+		}
+		.content .availability li {
+			text-align: left;
+			white-space: nowrap;
+		}
+		.content .availability i {
+			margin-right: 5px;
+			width: 40px;
+		}
+.loading {
+	display: inline-block;
+	text-align: right;
+}
+.loading-spinner {
+	height: 15px;
+	width: 15px;
+	margin: 0px 5px;
+	background-image: url("/images/loader.gif");
+	background-size: 15px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}

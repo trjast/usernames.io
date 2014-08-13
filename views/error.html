@@ -4,10 +4,9 @@
 Oops!
 {% endblock %}
 
+
 {% block content %}
-<center>
     <h1>Oops! Something went very wrong. <small>It's probably our fault.</small></h1>
-    <h2><a href="/">SCREW THAT!</a></h2>
-    <p>{{message}}</p>
-</center>
+    <p>{{ message }}</p>
+    <h2><a href="/">Try Another?</a></h2>
 {% endblock %}
