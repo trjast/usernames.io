@@ -1,14 +1,12 @@
-﻿<!DOCTYPE html>
+﻿{% extends 'layout.html' %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>{{user}} | usernames.io</title>
-</head>
-<body>
-    <center>
-        <h1>Why don't you use {{user}}.</h1>
-        <h2><a href="/">HELL NO!</a></h2>
-    </center>
-</body>
-</html>
+{% block title %}
+{{user}}
+{% endblock %}
+
+{% block content %}
+<center>
+    <h1>Why don't you use {{user}}.</h1>
+    <h2><a href="/">HELL NO!</a></h2>
+</center>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %} | usernames.io</title>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- SEO metas -->
+	<meta name="author" content="usernames.io">
+	<meta name="description" content="Create awesome and unique usernames!">
+	<meta name="keywords" content="username, generator, unique" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+	<!-- Fonts -->
+	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+
+	{% block styles %}{% endblock %}
+</head>
+<body>
+	{% block content %}{% endblock %}
+	{% block scripts %}{% endblock %}
+</body>
+</html>

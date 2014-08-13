@@ -32,7 +32,7 @@ function generateUsername(defered) {
 
                     // Now make it beautiful
                     var username = cap(descriptor) + cap(idiom);
-                    console.log("Result: " + username);
+                    console.log("Result: " + username + "\n");
                     defered.resolve(username);
                 }
             });
