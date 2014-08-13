@@ -2,10 +2,12 @@
 var isBrowser = require('user-agent-is-browser');
 var api = require('./api');
 var render = require('./render');
+var path = require('path');
 
 var port = process.env.port || 1337;
 
 var server = express();
+server.use(express.static(path.join(__dirname, 'public')));
 
 server.get("/", function (req, res) {
     api.get().done(function (username) {
