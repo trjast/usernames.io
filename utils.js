@@ -1,6 +1,5 @@
 ﻿module.exports = {
     capitalize: function (str) {
-        return str.substr(0, 1).toLocaleUpperCase() + 
-        str.substr(1,str.length);
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
 };
