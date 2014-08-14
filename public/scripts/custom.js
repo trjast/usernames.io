@@ -1,6 +1,9 @@
 var username;
 
 $(document).ready(function () {
+	$('.available').hide();
+	$('.unavailable').hide();
+
 	username = $('#username').text();
 	console.log(username);
 
@@ -11,5 +14,13 @@ $(document).ready(function () {
 });
 
 function fetchAvailability(service) {
-	console.log(service);
+	$.get( "/available/" + service + "/" + username, function(res) {
+		console.log(res);
+		$('#' + res.service + ' .loading-spinner').fadeOut(function() {
+			if(res.available)
+				$('#' + res.service + ' .available').fadeIn();
+			else
+				$('#' + res.service + ' .unavailable').fadeIn();
+		});
+	});
 }

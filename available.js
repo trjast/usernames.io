@@ -47,8 +47,7 @@ module.exports = {
         };
 
         request(options, function (error, res, body) {
-            console.log(res.statusCode);
-            var unique = (typeof res == 'undefined' || res.statusCode == 404);
+            var unique = (typeof res == 'undefined' || res.statusCode == 404);  // lets see what we caught!
             if(!unique) unique = ((res.toString()).search(/(not\sfound)/i) > -1);   // if we didn't get a 404 page *cough* facebook *cough* then let's regex to see if the a 404 is found
 
             defered.resolve(unique);

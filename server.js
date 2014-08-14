@@ -19,7 +19,7 @@ server.get("/", function (req, res) {
             res.send({ username: username });
         }
     }, function (fail) {
-        var message = "couldn't generate username";
+        var message = "Failed to generate username.";
         if (isBrowser(req.headers['user-agent'])) {
             res.send(500, render("error", { message: message }));
         } else {
