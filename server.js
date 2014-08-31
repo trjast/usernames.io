@@ -4,6 +4,7 @@ var api = require('./api');
 var available = require('./available');
 var render = require('./render');
 var path = require('path');
+var hljs = require('highlight.js');
 
 var port = process.env.port || 1337;
 
@@ -34,6 +35,10 @@ server.get("/available/:service/:username", function (req, res) {
     }, function (fail) {
         res.status(500).send();
     });
+});
+
+server.get("/developers", function(req, res) {
+    res.send(render("dev",{response: hljs.highlight("json","{{\"username\":\"your-username-here\"}}").value}));
 });
 
 server.listen(port, function () {

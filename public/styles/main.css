@@ -17,7 +17,10 @@ a:link, a:visited, a:active {
 a:hover {
     color: #E85C41;
 }
-
+#credits {
+	padding-top:20px;
+}
+code{font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;background-color:#eee}
 .header {
 	background: #E85C41;
 	width: 100%;

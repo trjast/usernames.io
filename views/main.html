@@ -1,9 +1,5 @@
 ﻿{% extends 'layout.html' %}
 
-{% block title %}
-{{ user }}
-{% endblock %}
-
 {% block content %}
 	<h1>How about <span id="username">{{ user }}</span>?</h1>
 	<ul class="availability">
@@ -54,6 +50,8 @@
 		</li>
 	</ul>
 	<h2><a href="/">Try Another?</a></h2>
+	<p id="credits">Made with all the love in the world by <a href="http://bengreenier.com">Ben</a> and <a href="http://trjast.com">Trevor</a>.</p>
+	<p>PS: If you're a developer, check <a href="/developers">this out</a>.</p>
 {% endblock %}
 
 {% block scripts %}

@@ -12,6 +12,7 @@
     "q": "^1.0.1",
     "request": "^2.37.0",
     "swig": "^1.4.1",
-    "user-agent-is-browser": "^0.1.0"
+    "user-agent-is-browser": "^0.1.0",
+    "highlight.js": "~8.2.0"
   }
 }

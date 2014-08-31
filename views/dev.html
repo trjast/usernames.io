@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <center style="margin:auto;width:500px;">
+  <h2>Are you a developer?</h2>
+  <p>If you've got an app or service that needs to generate usernames, why not use us?!
+  It's really simple, just hit our service with a <b>GET request</b> that has either <b>no User-Agent string</b>, or a non-browser User-Agent string.
+  Bam. We'll respond with <code>{{response}}</code>. <b>Done.</b></p>
+  </center>
+{% endblock %}
